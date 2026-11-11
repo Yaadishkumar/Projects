@@ -1,0 +1,15 @@
+# Render Infrastructure as Code Blueprint for PhishShift
+# Single-service full-stack deployment: Flask serves both the API and the React SPA
+services:
+  - type: web
+    name: phishshift
+    runtime: python
+    buildCommand: pip install -r requirements.txt && cd frontend && npm install && npm run build
+    startCommand: gunicorn app:app
+    envVars:
+      - key: FLASK_DEBUG
+        value: 0
+      - key: ALLOWED_ORIGINS
+        value: "*"
+      - key: SECRET_KEY
+        generateValue: true

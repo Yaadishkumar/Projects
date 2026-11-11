@@ -1,0 +1,35 @@
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Node & Frontend dependencies
+**/node_modules/
+**/dist/
+**/build/
+.npm/
+
+# Python cache & bytecode
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Flask / database runtime instances
+**/instance/
+*.sqlite3
+
+# Environment variables & local secrets
+.env
+.env.local
+.env.*.local
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
